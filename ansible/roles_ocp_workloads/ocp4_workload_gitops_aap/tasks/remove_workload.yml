@@ -30,7 +30,7 @@
       state: absent
       api_version: v1
       kind: Namespace
-      name: ansible-automation-platform
+      name: aap
 
 - name: Remove temp kube config
   file:

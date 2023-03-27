@@ -9,7 +9,7 @@
     api_version: "route.openshift.io/v1"
     kind: Route
     name: controller
-    namespace: ansible-automation-platform
+    namespace: aap
   register: r_ac_route
   until: r_ac_route.resources[0].spec.host is defined
   retries: 300
@@ -20,7 +20,7 @@
     api_version: "v1"
     kind: Secret
     name: controller-admin-password
-    namespace: ansible-automation-platform
+    namespace: aap
   register: r_ac_secret
   until:
   - r_ac_secret.resources is defined

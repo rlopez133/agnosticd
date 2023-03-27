@@ -8,13 +8,14 @@ tmp_kubeconfig: "{{ tmp_dir }}/.kube/config"
 # -----------------------------------------------------------------
 # Ansible Automation Platform Operator
 # -----------------------------------------------------------------
-ocp4_workload_gitops_aap_operator_name: ansible-automation-platform
-ocp4_workload_gitops_aap_operator_namespace: ansible-automation-platform
+ocp4_workload_gitops_aap_operator_name: ansible-automation-platform-operator.aap
+ocp4_workload_gitops_aap_operator_namespace: aap
 ocp4_workload_gitops_aap_operator_repo: "{{ ocp4_workload_gitops_aap_repo }}"
 ocp4_workload_gitops_aap_operator_repo_tag: main
 ocp4_workload_gitops_aap_operator_repo_path: operator/base
 # Default source git repository
-ocp4_workload_gitops_aap_repo: https://github.com/redhat-gpte-devopsautomation/aap2-gitops
+#ocp4_workload_gitops_aap_repo: https://github.com/redhat-gpte-devopsautomation/aap2-gitops
+ocp4_workload_gitops_aap_repo: https://github.com/rlopez133/aap2-gitops
 
 # -----------------------------------------------------------------
 # Ansible Automation Controller
@@ -24,7 +25,7 @@ ocp4_workload_gitops_aap_install_controller: true
 
 # Single User Controller
 ocp4_workload_gitops_aap_controller_name: controller
-ocp4_workload_gitops_aap_controller_namespace: ansible-automation-platform
+ocp4_workload_gitops_aap_controller_namespace: aap
 ocp4_workload_gitops_aap_controller_repo: "{{ ocp4_workload_gitops_aap_repo }}"
 ocp4_workload_gitops_aap_controller_repo_tag: main
 ocp4_workload_gitops_aap_controller_repo_path: controller/base
@@ -37,7 +38,7 @@ ocp4_workload_gitops_aap_install_hub: false
 
 # Single User Hub
 ocp4_workload_gitops_aap_hub_name: hub
-ocp4_workload_gitops_aap_hub_namespace: ansible-automation-platform
+ocp4_workload_gitops_aap_hub_namespace: aap
 ocp4_workload_gitops_aap_hub_repo: "{{ ocp4_workload_gitops_aap_repo }}"
 ocp4_workload_gitops_aap_hub_repo_tag: main
 ocp4_workload_gitops_aap_hub_repo_path: hub/base
